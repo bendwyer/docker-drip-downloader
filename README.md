@@ -2,9 +2,9 @@
 Dockerized version of [drip-downloader](https://github.com/cobalamin/drip-downloader) by [cobalamin](https://github.com/cobalamin). Useful for downloading your Drip.fm music all at once.
 
 ## Links
-- [Github](https://github.com/bendwyer/docker-drip-downloader)
-- Docker Hub
-- Docker Store
+- Source files - [Github](https://github.com/bendwyer/docker-drip-downloader)
+- Container - [Docker Hub](https://hub.docker.com/r/bendwyer/docker-drip-downloader/)
+- Container - [Docker Store](https://store.docker.com/community/images/bendwyer/docker-drip-downloader)
 
 ## Disclaimer
 I'm not a Docker or Linux expert. Proceed at your own risk.
