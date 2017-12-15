@@ -18,8 +18,20 @@ Deploy a Drip container:
 docker run -itd --name <container name> -v </path/to/external/storage/folder>:/data bendwyer/docker-drip-downloader:latest
 ```
 
-Attach to Drip container and use shell:
+Once deployed, check the logs to verify that the container is sitting at the login screen for the ruby script:
 ```
-# By default the ENTRYPOINT is 'ruby' and the container will run a pre-set CMD. The code below allows you to bypass all that if needed.
+docker logs docker-drip-downloader | tail -n 100
+```
+
+You'll need to `attach` to the container to get the downloads started. When you `attach` you'll see a blank screen because the script is waiting for you to enter your email address. Once you enter your email you can follow the prompts to get your downloads started.
+```
+docker attach docker-drip-downloader
+
+email@domain.tld
+Password: 
+```
+
+By default the ENTRYPOINT is 'ruby' and the container will run a pre-set CMD. The code below allows you to bypass all that if needed.
+```
 docker exec -it <container-name> sh
 ```
